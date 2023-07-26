@@ -1,0 +1,132 @@
+:root {
+  --bg: #f3f3f3;
+  --second-bg: #121212;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  list-style: none;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+}
+
+main {
+  display: flex;
+  flex: 1;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.text {
+  text-align: center;
+  font-size: 60px;
+  font-weight: bold;
+  line-height: 1;
+  margin-top: 2rem;
+}
+
+.wrapper .static-text {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.wrapper .dinamic-text {
+  margin-left: 1rem;
+  height: 90px;
+  line-height: 90px;
+  overflow: hidden;
+}
+
+.wrapper .dinamic-text li {
+  font-size: 60px;
+  font-weight: bold;
+  color: salmon;
+}
+
+.wrapper .dinamic-text li {
+  position: relative;
+  /* margin-bottom: 1rem; */
+  animation: slides 6s steps(4) infinite;
+  top: 0;
+}
+
+.wrapper .dinamic-text li span::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-left: 2px solid salmon;
+  left: 0;
+  animation: typing 1.5s steps(10) infinite;
+  background-color: #f3f3f3;
+}
+
+@keyframes typing {
+  100% {
+    left: 100%;
+    margin: 0 -35px 0 35px;
+  }
+}
+
+@keyframes slides {
+  100% {
+    top: -360px;
+  }
+}
+/* .wrapper .static-text {
+  color: #121212;
+  font-size: 4rem;
+  text-transform: capitalize;
+  padding: 3rem 7%;
+  text-align: center;
+  line-height: 1.1;
+  font-weight: bold;
+  background-color: salmon;
+} */
+
+article {
+  padding-left: 7%;
+}
+
+article h3 {
+  margin-top: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.side-img {
+  padding: 0 6%;
+}
+
+.side-img {
+  margin-bottom: 2rem;
+  transition: 3s;
+}
+
+.side-img img {
+  width: 400px;
+  filter: drop-shadow(12px 0 7px rgba(18, 18, 18, 0.5));
+  overflow: hidden;
+}
+
+.side-img:hover {
+  filter: drop-shadow(12px 0 7px rgba(18, 18, 18, 1));
+  transform: rotate(-10deg);
+  transform: scale(1.1);
+}
+
+.paragraf {
+  font-family: "montserrat", sans-serif;
+  font-weight: 400;
+  line-height: 1.2;
+}

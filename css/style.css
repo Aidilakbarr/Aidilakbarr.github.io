@@ -1,0 +1,100 @@
+:root {
+  --bg: #f3f3f3;
+  --second-bg: #121212;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  list-style: none;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+}
+
+section.home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5rem 7%;
+}
+
+.home img {
+  width: 45%;
+  position: relative;
+  left: 0;
+  /* border-radius: 50%; */
+  filter: drop-shadow(-12px 0 7px rgba(18, 18, 18, 0.5));
+  padding-right: 2rem;
+  transition: 3s;
+}
+
+.home img:hover {
+  filter: drop-shadow(-12px 0 7px rgba(18, 18, 18, 1));
+  transform: rotate(10deg);
+  transform: scale(1.1);
+}
+
+.text h1 {
+  text-transform: capitalize;
+  font-size: 3.3rem;
+  line-height: 1;
+}
+
+.text p {
+  font-size: 1rem;
+  margin-top: 1rem;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.text a button {
+  display: flex;
+  background-color: #121212;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  float: left;
+  cursor: pointer;
+  transition: linear 0.3s;
+}
+
+.text a button:hover {
+  background-color: #87ceeb;
+  color: #121212;
+}
+
+.download,
+.kontak {
+  position: relative;
+  left: 6px;
+}
+
+.text a .contact {
+  display: flex;
+  color: #121212;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  float: left;
+  text-decoration: underline;
+  transition: linear 0.3s;
+}
+
+.text a .contact:hover {
+  transform: scale(1.1);
+  color: #87ceeb;
+}
